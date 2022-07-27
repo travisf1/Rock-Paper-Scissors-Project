@@ -21,55 +21,116 @@ var choicesArray = ["Rock", "Paper", "Scissors"];
     function getComputerChoice() {
         var randomChoice = choicesArray[Math.floor(Math.random() * choicesArray.length)];
         return randomChoice
-        }
+    }
 
  // console.log(getComputerChoice())  
 
 
        const computerSelection = getComputerChoice();
         
-    
+        const playerSelection = "Rock".toLowerCase();
 
-       const playerSelection = "RocK".toLowerCase(); //change to future prompt input
-
+       //const playerSelection = prompt("Choose Rock, Paper, or Scissors", "".toLowerCase()); //change to future prompt input
+       
         
-     console.log(computerSelection);
+        //console.log(computerSelection);
     
-     console.log(playerSelection);
+        // console.log(playerSelection);
 
     
     function playRound(playerSelection, computerSelection) {
 
     
         if (computerSelection === "Rock" && playerSelection === "scissors") {
-            return "You lose!, Rock beats scissors";
+            return "You lose";
         } else if (computerSelection === "Rock" && playerSelection === "paper") {
-            return "You win! Paper beats rock";
+            return "You win";
         } else if (computerSelection === "Rock" && playerSelection === "rock") {
-            return "This round was a draw.";
+            return "This is a draw.";
         } else if (computerSelection === "Paper" && playerSelection === "scissors") {
-            return "You win, Scissors beat paper!";
+            return "You win";
         } else if (computerSelection === "Paper" && playerSelection === "paper") {
-            return "This round is a draw";
+            return "This is a draw";
         } else if (computerSelection === "Paper" && playerSelection === "rock") {
-            return "You lose, paper beats rock!";
+            return "You lose";
         } else if (computerSelection === "Scissors" && playerSelection === "scissors") {
-            return "This round is a draw";
+            return "This is a draw";
         } else if (computerSelection === "Scissors" && playerSelection === "paper") {
-            return "You lose, scissors beats paper!";
+            return "You lose";
         } else if (computerSelection === "Scissors" && playerSelection === "rock") {
-            return "You win, rock beats scissors!!";
+            return "You win";
+         } else {
+            return "You need to pick Rock, Paper, or Scissors";
          }
 
          
     }
-        
+        //function playRound above
         console.log(computerSelection)
     
-     console.log(playerSelection);
-    console.log(playRound(playerSelection, computerSelection))
+        console.log(playerSelection);
+
+        console.log(playRound(playerSelection, computerSelection))
+
+        console.log(playRound())
+
+// Write a NEW function called game(). Call the playRound function 
+// inside of this one to play a 5 round game that keeps score 
+// and reports a winner or loser at the end.
+
+    
+function game() {
+     for (let i = 0; i < 5; i++) {
+        console.log(playRound(playerSelection, computerSelection)); 
+        }
+    }
+
+   console.log(game()) 
 
 
+
+
+
+
+
+
+
+
+
+
+        
+        
+        /*function game() {
+            var userScore = 0
+            var computerScore = 0
+            
+            for (let i = 0; i < 5; i++) {
+                console.log(playRound(playerSelection, computerSelection));
+               
+                     if (playRound() === "You win") {
+                        ++userScore
+                     } else if (playRound() === "You lose") {
+                        ++computerScore
+                }
+            }
+
+            console.log(userScore);
+            console.log(computerScore);
+
+
+            if (userScore > computerScore) {
+                console.log("User wins")
+            } else {
+                console.log("User loses")
+            }
+        }
+           
+            console.log(game())
+            
+        */
+
+        
+        
 
 </script>
 
