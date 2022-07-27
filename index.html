@@ -18,15 +18,41 @@ var choicesArray = ["Rock", "Paper", "Scissors"];
 
 
 
-function getComputerChoice() {
-var randomChoice = choicesArray[Math.floor(Math.random() * choicesArray.length)];
-return randomChoice
-}
+    function getComputerChoice() {
+        var randomChoice = choicesArray[Math.floor(Math.random() * choicesArray.length)];
+        return randomChoice
+        }
 
   console.log(getComputerChoice())  
 
 
+    function playRound(playerSelection, computerSelection) {
+    
 
+    if (computerSelection === "Rock" && playerSelection === "scissors") {
+    return "You lose!, Rock beats scissors"
+
+   } else if (computerSelection === "Rock" && playerSelection === "paper") {
+    return "You win! Paper beats rock"
+    } else if (computerSelection === "Rock" && playerSelection === "rock") {
+        return "This round was a draw."
+    } else if (computerSelection === "Paper" && playerSelections === "scissors") {
+        return "You win, Scissors beat paper!"
+    } else if (computerSelection === "Paper" && playerSelections === "paper") {
+        return "This round is a draw"
+    } else if (computerSelection === "Paper" && playerSelections === "rock") {
+        return "You lose, paper beats rock!"
+    } else if (computerSelection === "Scissors" && playerSelections === "scissors") {
+        return "This round is a draw"
+    } else if (computerSelection === "Scissors" && playerSelections === "paper") {
+        return "You lose, scissors beats paper!"
+    } else if (computerSelection === "Scissors" && playerSelections === "rock") {
+        return "You win, rock beats scissors!!"
+
+
+    const playerSelection = "rock";
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection))
 
 
 
