@@ -23,32 +23,39 @@ var choicesArray = ["Rock", "Paper", "Scissors"];
         return randomChoice
     }
 
+
+        // var playerChoice = "" //added this
+
+        let playerSelection = prompt("Choose Rock, Paper, or Scissors", ""); //added this
+
+        //playerselection = playerSelection.toLowerCase()
+
         let computerSelection = getComputerChoice();
         
-        let playerSelection = "Rock".toLowerCase();
+       // let playerSelection = "Rock".toLowerCase();
 
-       //let playerSelection = prompt("Choose Rock, Paper, or Scissors", "".toLowerCase()); //change to future prompt input
+       
        
     function playRound(playerSelection, computerSelection) {
 
     
-        if (computerSelection === "Rock" && playerSelection === "scissors") {
+        if (computerSelection === "Rock" && playerSelection.toLowerCase() === "scissors") {
             return "You lose";
-        } else if (computerSelection === "Rock" && playerSelection === "paper") {
+        } else if (computerSelection === "Rock" && playerSelection.toLowerCase() === "paper") {
             return "You win";
-        } else if (computerSelection === "Rock" && playerSelection === "rock") {
+        } else if (computerSelection === "Rock" && playerSelection.toLowerCase() === "rock") {
             return "This is a draw.";
-        } else if (computerSelection === "Paper" && playerSelection === "scissors") {
+        } else if (computerSelection === "Paper" && playerSelection.toLowerCase() === "scissors") {
             return "You win";
-        } else if (computerSelection === "Paper" && playerSelection === "paper") {
+        } else if (computerSelection === "Paper" && playerSelection.toLowerCase() === "paper") {
             return "This is a draw";
-        } else if (computerSelection === "Paper" && playerSelection === "rock") {
+        } else if (computerSelection === "Paper" && playerSelection.toLowerCase() === "rock") {
             return "You lose";
-        } else if (computerSelection === "Scissors" && playerSelection === "scissors") {
+        } else if (computerSelection === "Scissors" && playerSelection.toLowerCase() === "scissors") {
             return "This is a draw";
-        } else if (computerSelection === "Scissors" && playerSelection === "paper") {
+        } else if (computerSelection === "Scissors" && playerSelection.toLowerCase() === "paper") {
             return "You lose";
-        } else if (computerSelection === "Scissors" && playerSelection === "rock") {
+        } else if (computerSelection === "Scissors" && playerSelection.toLowerCase() === "rock") {
             return "You win";
          } else {
             return "You need to pick Rock, Paper, or Scissors";
@@ -103,9 +110,18 @@ function game() {
 
      for (let i = 0; i < 5; i++) {
          let computerSelection = getComputerChoice();
-         let playerSelection = "Rock".toLowerCase();
+        
+        // let playerSelection = "Rock".toLowerCase();
 
-            
+        //var playerChoice = "" //added this
+
+        let playerSelection = prompt("Choose Rock, Paper, or Scissors", ""); //added this
+
+        //playerselection = playerSelection.toLowerCase()
+        
+
+                
+
             console.log(computerSelection);
     
             console.log(playerSelection);
