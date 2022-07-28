@@ -26,18 +26,22 @@ var choicesArray = ["Rock", "Paper", "Scissors"];
 
         // var playerChoice = "" //added this
 
-        let playerSelection = prompt("Choose Rock, Paper, or Scissors", ""); //added this
-
         //playerselection = playerSelection.toLowerCase()
-
-        let computerSelection = getComputerChoice();
         
-       // let playerSelection = "Rock".toLowerCase();
+        // let playerSelection = "Rock".toLowerCase();
+        
+        
+       // let playerSelection = prompt("Choose Rock, Paper, or Scissors", ""); //added this
+
+        
+
+       // let computerSelection = getComputerChoice();
+        
+       
 
        
        
     function playRound(playerSelection, computerSelection) {
-
     
         if (computerSelection === "Rock" && playerSelection.toLowerCase() === "scissors") {
             return "You lose";
@@ -131,9 +135,9 @@ function game() {
             //return (playRound(playerSelection, computerSelection)); 
 
     if (playRound(playerSelection, computerSelection) === "You win") {
-                      console.log(++userScore);
+                      ++userScore;
             } else if (playRound(playerSelection, computerSelection) === "You lose") {
-                        console.log(++computerScore);
+                        ++computerScore;
                 }
             
 
