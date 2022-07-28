@@ -1,28 +1,15 @@
 
+
 //return a random string from a set of strings
 
 var choicesArray = ["Rock", "Paper", "Scissors"];
 
-    function getComputerChoice() {
+function getComputerChoice() {
         var randomChoice = choicesArray[Math.floor(Math.random() * choicesArray.length)];
         return randomChoice
     }
-
-
-        // var playerChoice = "" //added this
-
-        let playerSelection = prompt("Choose Rock, Paper, or Scissors", ""); //added this
-
-        //playerselection = playerSelection.toLowerCase()
-
-        let computerSelection = getComputerChoice();
-        
-       // let playerSelection = "Rock".toLowerCase();
-
        
-       
-    function playRound(playerSelection, computerSelection) {
-
+function playRound(playerSelection, computerSelection) {
     
         if (computerSelection === "Rock" && playerSelection.toLowerCase() === "scissors") {
             return "You lose";
@@ -48,43 +35,7 @@ var choicesArray = ["Rock", "Paper", "Scissors"];
 
          
     }
-        //function playRound above
-       //console.log(computerSelection);
-    
-      // console.log(playerSelection);
-
-       // console.log(playRound(playerSelection, computerSelection));
-
-        
-
-// Write a NEW function called game(). Call the playRound function 
-// inside of this one to play a 5 round game that keeps score 
-// and reports a winner or loser at the end.
-
-    
-//working game() function 
-/*
-
-function game() {
-     for (let i = 0; i < 5; i++) {
-        let computerSelection = getComputerChoice();
-        
-        let playerSelection = "Rock".toLowerCase();
-
-       //console.log(playRound(playerSelection, computerSelection)); //added this
-        return playRound(playerSelection, computerSelection); 
-        //console.log(playRound(playerSelection, computerSelection)); //added this
-        }
-        
-    }
-
-   game();
-    console.log(game()) //added this
-
-            */
-
-
-    // Testing version with score count
+     
 
     function game() {
 
@@ -94,16 +45,7 @@ function game() {
      for (let i = 0; i < 5; i++) {
          let computerSelection = getComputerChoice();
         
-        // let playerSelection = "Rock".toLowerCase();
-
-        //var playerChoice = "" //added this
-
-        let playerSelection = prompt("Choose Rock, Paper, or Scissors", ""); //added this
-
-        //playerselection = playerSelection.toLowerCase()
-        
-
-                
+         let playerSelection = prompt("Choose Rock, Paper, or Scissors", ""); //added this
 
             console.log(computerSelection);
     
@@ -114,16 +56,16 @@ function game() {
             //return (playRound(playerSelection, computerSelection)); 
 
             if (playRound(playerSelection, computerSelection) === "You win") {
-            console.log(++userScore);
+                ++userScore;
+            } else if 
+            (playRound(playerSelection, computerSelection) === "You lose") 
+            {   ++computerScore; }
             
-            } else if (playRound(playerSelection, computerSelection) === "You lose") {
-            console.log(++computerScore); }
+            console.log(userScore);
+            console.log(computerScore);
             
-                console.log(userScore);
-                console.log(computerScore);
-      }
-        
-        
+        }
+
         if (userScore > computerScore) {
                 console.log("User wins");
             } else if (userScore < computerScore){
@@ -133,8 +75,10 @@ function game() {
             }
     }
 
-   game();
+    game();
 
- //   console.log(game())
+ 
+
+            
 
             
